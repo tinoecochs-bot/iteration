@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 80 20% 97%;
+    --foreground: 132 47% 21%;
+
+    --card: 80 20% 97%;
+    --card-foreground: 132 47% 21%;
+
+    --primary: 132 47% 21%;
+    --primary-foreground: 80 20% 97%;
+
+    --secondary: 107 33% 49%;
+    --secondary-foreground: 132 47% 21%;
+
+    --muted: 80 15% 92%;
+    --muted-foreground: 132 15% 40%;
+
+    --accent: 107 33% 49%;
+    --accent-foreground: 132 47% 21%;
+
+    --border: 132 20% 85%;
+    --input: 132 20% 85%;
+    --ring: 107 33% 49%;
+
+    --radius: 0.5rem;
+
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    margin: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* ------------------------------
+   TINO ECO GREEN DESIGN SYSTEM
+-------------------------------- */
+
+.leaf-pattern {
+  background-color: #1c4d26;
+  background-image:
+    radial-gradient(
+      ellipse at 20% 20%,
+      rgba(103, 167, 85, 0.18) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 80% 70%,
+      rgba(103, 167, 85, 0.14) 0%,
+      transparent 45%
+    );
+}
+
+/* Soft organic background */
+.organic-bg {
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(103, 167, 85, 0.15),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(45, 90, 39, 0.12),
+      transparent 30%
+    ),
+    #f7f9f2;
+}
+
+/* Leafy decorative glow */
+.leaf-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 60% 40% 65% 35%;
+  background: rgba(103, 167, 85, 0.18);
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+/* Topographic / organic texture */
+.topo-overlay {
+  background-image:
+    radial-gradient(
+      ellipse at 20% 30%,
+      transparent 0,
+      transparent 45%,
+      rgba(103, 167, 85, 0.06) 46%,
+      transparent 47%
+    ),
+    radial-gradient(
+      ellipse at 80% 70%,
+      transparent 0,
+      transparent 40%,
+      rgba(103, 167, 85, 0.05) 41%,
+      transparent 42%
+    );
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f9f2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1c4d26;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #67a755;
+}
+
+/* Selection */
+::selection {
+  background: #67a755;
+  color: #1c4d26;
+}
